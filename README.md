@@ -1,7 +1,23 @@
+# Introduction
+
+Algorithms that create harmonized list of date ranges based on list of date ranges that have overlaps.
+
+For example consider the following date ranges that overlap.
+```
+A --- B 
+   C----D
+```
+The result list of the harmonization looks as follows:
+
+```
+[(A, C - 1), (C, B), (B + 1, D)]
+```
+-1 and +1 represent subtraction or addition of one day.
+
 # Benchmark Results
 
-
 ## Throughput
+
 | Number of Date Ranges | Cnt | Score (BF) | Score (OPT) | Error (BF)  |  Error (OPT)  | Units  |
 |----------------------:|----:|-----------:|------------:|:-----------:|:-------------:|--------|
 |                   100 |   5 |     ≈ 10⁻⁶ |      ≈ 10⁻⁵ |      -      |       -       | ops/ns |
@@ -10,8 +26,8 @@
 |                   500 |   5 |     ≈ 10⁻⁷ |      ≈ 10⁻⁶ |      -      |       -       | ops/ns |
 |                  1000 |   5 |     ≈ 10⁻⁸ |      ≈ 10⁻⁶ |      -      |       -       | ops/ns |
 
-
 ## Average Time
+
 | Number of Date Ranges | Cnt |     Score (BF) |  Score (OPT) |  Error (BF) | Error (OPT) | Units |
 |----------------------:|----:|---------------:|-------------:|------------:|------------:|------:|
 |                   100 |   5 |   772375.697 ± |  53490.993 ± |    1887.405 |     439.354 | ns/op |
@@ -21,6 +37,7 @@
 |                  1000 |   5 | 84206047.240 ± | 714277.690 ± | 1036959.514 |    3992.972 | ns/op |
 
 ## Single shot invocation time
+
 | Number of Date Ranges | Cnt |    Score (BF) |  Score (OPT) | Error (BF)  | Error (OPT) | Units |
 |----------------------:|----:|--------------:|-------------:|:-----------:|:-----------:|:-----:|
 |                   100 |   5 |  20875261.000 |  9502526.000 |      -      |      -      | ns/op |
