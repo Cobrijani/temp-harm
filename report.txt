@@ -1,0 +1,123 @@
+Benchmark                                                    (numberOfDateRanges)    Mode     Cnt          Score         Error   Units
+AlgorithmsBenchmark.benchBruteforce                                           100   thrpt       5         ≈ 10⁻⁶                ops/ns
+AlgorithmsBenchmark.benchBruteforce                                           200   thrpt       5         ≈ 10⁻⁶                ops/ns
+AlgorithmsBenchmark.benchBruteforce                                           300   thrpt       5         ≈ 10⁻⁷                ops/ns
+AlgorithmsBenchmark.benchBruteforce                                           500   thrpt       5         ≈ 10⁻⁷                ops/ns
+AlgorithmsBenchmark.benchBruteforce                                          1000   thrpt       5         ≈ 10⁻⁸                ops/ns
+AlgorithmsBenchmark.benchOptimized                                            100   thrpt       5         ≈ 10⁻⁵                ops/ns
+AlgorithmsBenchmark.benchOptimized                                            200   thrpt       5         ≈ 10⁻⁵                ops/ns
+AlgorithmsBenchmark.benchOptimized                                            300   thrpt       5         ≈ 10⁻⁵                ops/ns
+AlgorithmsBenchmark.benchOptimized                                            500   thrpt       5         ≈ 10⁻⁶                ops/ns
+AlgorithmsBenchmark.benchOptimized                                           1000   thrpt       5         ≈ 10⁻⁶                ops/ns
+AlgorithmsBenchmark.benchBruteforce                                           100    avgt       5     772375.697 ±    1887.405   ns/op
+AlgorithmsBenchmark.benchBruteforce                                           200    avgt       5    3129582.144 ±    3806.883   ns/op
+AlgorithmsBenchmark.benchBruteforce                                           300    avgt       5    6995960.544 ±   34009.448   ns/op
+AlgorithmsBenchmark.benchBruteforce                                           500    avgt       5   20686795.432 ±   49483.721   ns/op
+AlgorithmsBenchmark.benchBruteforce                                          1000    avgt       5   84206047.240 ± 1036959.514   ns/op
+AlgorithmsBenchmark.benchOptimized                                            100    avgt       5      53490.993 ±     439.354   ns/op
+AlgorithmsBenchmark.benchOptimized                                            200    avgt       5     115131.978 ±     235.230   ns/op
+AlgorithmsBenchmark.benchOptimized                                            300    avgt       5     177535.090 ±    1462.580   ns/op
+AlgorithmsBenchmark.benchOptimized                                            500    avgt       5     323399.321 ±    1558.603   ns/op
+AlgorithmsBenchmark.benchOptimized                                           1000    avgt       5     714277.690 ±    3992.972   ns/op
+
+AlgorithmsBenchmark.benchBruteforce                                           100  sample   62458     777154.224 ±     511.396   ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.00                     100  sample             676864.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.50                     100  sample             775168.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.90                     100  sample             800768.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.95                     100  sample             811008.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.99                     100  sample             862208.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.999                    100  sample            1481811.968                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.9999                   100  sample            1610768.794                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p1.00                     100  sample            1832960.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           200  sample   16265    3026689.401 ±    2367.652   ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.00                     200  sample            2752512.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.50                     200  sample            3022848.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.90                     200  sample            3121152.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.95                     200  sample            3162112.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.99                     200  sample            3284992.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.999                    200  sample            3796992.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.9999                   200  sample            3959092.838                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p1.00                     200  sample            4038656.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           300  sample    6937    7141006.669 ±    6706.431   ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.00                     300  sample            6610944.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.50                     300  sample            7127040.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.90                     300  sample            7340032.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.95                     300  sample            7421952.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.99                     300  sample            7708672.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.999                    300  sample            7954432.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.9999                   300  sample            9125888.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p1.00                     300  sample            9125888.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           500  sample    2414   20612565.157 ±   43985.449   ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.00                     500  sample           18874368.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.50                     500  sample           20512768.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.90                     500  sample           21233664.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.95                     500  sample           21962752.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.99                     500  sample           23166976.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.999                    500  sample           23806279.680                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.9999                   500  sample           25034752.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p1.00                     500  sample           25034752.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                          1000  sample     602   83119461.209 ± 2656237.126   ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.00                    1000  sample           75104256.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.50                    1000  sample           79953920.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.90                    1000  sample           83099648.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.95                    1000  sample           93152870.400                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.99                    1000  sample          154588938.240                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.999                   1000  sample          437256192.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p0.9999                  1000  sample          437256192.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce:benchBruteforce·p1.00                    1000  sample          437256192.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            100  sample  627602      53534.526 ±      52.034   ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.00                       100  sample              49472.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.50                       100  sample              52992.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.90                       100  sample              54144.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.95                       100  sample              55296.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.99                       100  sample              60544.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.999                      100  sample             104832.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.9999                     100  sample             768448.717                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p1.00                       100  sample             971776.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            200  sample  290029     124348.497 ±     126.464   ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.00                       200  sample             118016.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.50                       200  sample             123008.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.90                       200  sample             125824.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.95                       200  sample             128384.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.99                       200  sample             138240.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.999                      200  sample             208888.320                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.9999                     200  sample            1003516.928                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p1.00                       200  sample            1642496.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            300  sample  190876     192801.264 ±     202.205   ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.00                       300  sample             184320.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.50                       300  sample             190720.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.90                       300  sample             194816.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.95                       300  sample             198656.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.99                       300  sample             211968.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.999                      300  sample             905341.952                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.9999                     300  sample            1050444.390                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p1.00                       300  sample            1132544.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            500  sample  109922     337651.461 ±     366.042   ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.00                       500  sample             325120.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.50                       500  sample             333312.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.90                       500  sample             343552.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.95                       500  sample             352256.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.99                       500  sample             391168.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.999                      500  sample            1101981.696                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.9999                     500  sample            1245278.618                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p1.00                       500  sample            5308416.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                           1000  sample   54785     700377.346 ±     660.524   ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.00                      1000  sample             657408.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.50                      1000  sample             694272.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.90                      1000  sample             715776.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.95                      1000  sample             726016.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.99                      1000  sample             786432.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.999                     1000  sample            1483190.272                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p0.9999                    1000  sample            1576960.000                 ns/op
+AlgorithmsBenchmark.benchOptimized:benchOptimized·p1.00                      1000  sample            1605632.000                 ns/op
+
+AlgorithmsBenchmark.benchBruteforce                                           100      ss           20875261.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           200      ss           32037848.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           300      ss           46083486.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                           500      ss           74905325.000                 ns/op
+AlgorithmsBenchmark.benchBruteforce                                          1000      ss          241499746.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            100      ss            9502526.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            200      ss           11011959.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            300      ss           13122494.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                            500      ss           16014941.000                 ns/op
+AlgorithmsBenchmark.benchOptimized                                           1000      ss           19305947.000                 ns/op
