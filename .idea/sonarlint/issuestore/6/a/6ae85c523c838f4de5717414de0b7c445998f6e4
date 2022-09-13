@@ -1,0 +1,9 @@
+
+x
+java:S1104"VMake bruteForce a static final constant or non-public and provide accessors if needed.(¾Ìğúÿÿÿÿ8´‚é²0
+w
+java:S1104"UMake optimized a static final constant or non-public and provide accessors if needed.(‚ŸÇËùÿÿÿÿ8¦Ğê²0
+l
+java:S1104"VMake dateRanges a static final constant or non-public and provide accessors if needed.(çéª½
+h
+java:S6204 "RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹

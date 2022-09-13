@@ -24,7 +24,7 @@ class AlgorithmCorrectnessTest {
     @ParameterizedTest(name = "{0}")
     @MethodSource("allCases")
     void optimized(String name, List<DateRange> inputs, List<Tuple> output) {
-         runTests(inputs, output, new OptimizedTemporalHarmonizerAlgorithm());
+        runTests(inputs, output, new OptimizedTemporalHarmonizerAlgorithm());
     }
 
     @ParameterizedTest(name = "{0}")
@@ -46,7 +46,9 @@ class AlgorithmCorrectnessTest {
                 twoIntervalsSameTo(),
                 twoIntervalsSameToInf(),
                 dotSampleCase(),
-                sameDateSample());
+                dotSampleCaseInf(),
+                sameDateSample(),
+                sameDateSampleInf());
     }
 
     private void runTests(List<DateRange> inputs, List<Tuple> output, TemporalHarmonizerAlgorithm algorithm) {
@@ -293,6 +295,31 @@ class AlgorithmCorrectnessTest {
                 .build();
     }
 
+    private static UseCase dotSampleCaseInf() {
+        /*
+         *  A--B
+         *           C--D
+         *       E-F
+         */
+        LocalDate a = LocalDate.of(2021, 1, 1);
+        LocalDate b = a.plusDays(3);
+        LocalDate c = b.plusMonths(1);
+        LocalDate d = null;
+        LocalDate e = b.plusDays(10);
+        LocalDate f = e;
+
+        return UseCase.builder()
+                .name("Dot simple case inf ")
+                .inputs(List.of(createDateRange(a, b),
+                        createDateRange(c, d),
+                        createDateRange(e, f)))
+                .output(List.of(
+                        tuple(a, b),
+                        tuple(e, f),
+                        tuple(c, d)))
+                .build();
+    }
+
     private static UseCase sameDateSample() {
         /*
          *  A--B
@@ -305,6 +332,26 @@ class AlgorithmCorrectnessTest {
 
         return UseCase.builder()
                 .name("Same date sample")
+                .inputs(List.of(createDateRange(a, b),
+                        createDateRange(c, d)))
+                .output(List.of(
+                        tuple(a, b),
+                        tuple(c.plusDays(1), d)))
+                .build();
+    }
+
+    private static UseCase sameDateSampleInf() {
+        /*
+         *  A--B
+         *     C--D (inf)
+         */
+        LocalDate a = LocalDate.of(2021, 1, 1);
+        LocalDate b = a.plusDays(3);
+        LocalDate c = b;
+        LocalDate d = null;
+
+        return UseCase.builder()
+                .name("Same date sample inf")
                 .inputs(List.of(createDateRange(a, b),
                         createDateRange(c, d)))
                 .output(List.of(
