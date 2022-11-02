@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -24,13 +25,37 @@ class AlgorithmCorrectnessTest {
     @ParameterizedTest(name = "{0}")
     @MethodSource("allCases")
     void optimized(String name, List<DateRange> inputs, List<Tuple> output) {
-        runTests(inputs, output, new OptimizedTemporalHarmonizerAlgorithm());
+        runTests(inputs, output, new OptimizedTemporalHarmonizerAlgorithm(new NormalSortingStrategy()));
+    }
+
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("allCases")
+    void optimizedLsd(String name, List<DateRange> inputs, List<Tuple> output) {
+        runTests(inputs, output, new OptimizedTemporalHarmonizerAlgorithm(new LsdRadixSortingStrategy()));
     }
 
     @ParameterizedTest(name = "{0}")
     @MethodSource("allCases")
     void bruteForce(String name, List<DateRange> inputs, List<Tuple> output) {
         runTests(inputs, output, new BruteForceTemporalHarmonizerAlgorithm());
+    }
+
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("allCases")
+    void lsdRadixSort(String name, List<DateRange> inputs, List<Tuple> output) {
+        final List<DatePoint> datePoints = inputs.stream()
+                .flatMap(dateRange -> dateRange.createDatePoints().stream())
+                .collect(Collectors.toList());
+        new LsdRadixSortingStrategy().sort(datePoints);
+
+        final List<DatePoint> expected = inputs.stream()
+                .flatMap(dateRange -> dateRange.createDatePoints().stream())
+                .collect(Collectors.toList());
+
+        new NormalSortingStrategy().sort(expected);
+
+        assertThat(datePoints).asList()
+                .isEqualTo(expected);
     }
 
     private static Stream<Arguments> allCases() {

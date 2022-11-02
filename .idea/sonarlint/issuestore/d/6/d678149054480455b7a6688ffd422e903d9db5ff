@@ -1,9 +1,0 @@
-
->
-java:S3864 "!Remove this use of "Stream.peek".(÷“—†8Öƒ¦ê±0
-C
-java:S3864"!Remove this use of "Stream.peek".(ÊÉ…©ýÿÿÿÿ8×ƒ¦ê±0
-o
-java:S6204I"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8¤„¦ê±0
-o
-java:S6204K"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(×‡ÃÐ8§„¦ê±0

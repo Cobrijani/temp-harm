@@ -1,8 +1,6 @@
 package com.github.cobrijani.tempharm.benchmark;
 
-import com.github.cobrijani.tempharm.BruteForceTemporalHarmonizerAlgorithm;
-import com.github.cobrijani.tempharm.DateRange;
-import com.github.cobrijani.tempharm.OptimizedTemporalHarmonizerAlgorithm;
+import com.github.cobrijani.tempharm.*;
 import org.openjdk.jmh.annotations.*;
 
 import java.time.LocalDate;
@@ -15,18 +13,20 @@ import java.util.stream.IntStream;
 
 @State(Scope.Benchmark)
 public class ExecutionPlan {
-
-    @Param({ "100", "200", "300", "500", "1000" })
+    @Param({ "100", "1000", "10000", "100000" })
     public int numberOfDateRanges;
 
     public BruteForceTemporalHarmonizerAlgorithm bruteForce;
     public OptimizedTemporalHarmonizerAlgorithm optimized;
+
+    public OptimizedTemporalHarmonizerAlgorithm lsdOptimized;
     public List<DateRange> dateRanges;
 
     @Setup(Level.Invocation)
     public void setUp() {
         bruteForce = new BruteForceTemporalHarmonizerAlgorithm();
-        optimized = new OptimizedTemporalHarmonizerAlgorithm();
+        optimized = new OptimizedTemporalHarmonizerAlgorithm(new NormalSortingStrategy());
+        lsdOptimized = new OptimizedTemporalHarmonizerAlgorithm(new LsdRadixSortingStrategy());
         dateRanges = IntStream.range(0, numberOfDateRanges)
                 .mapToObj(x -> createRandomDateRange())
                 .collect(Collectors.toList());

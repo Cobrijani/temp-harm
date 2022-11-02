@@ -8,7 +8,8 @@ import lombok.RequiredArgsConstructor;
 public enum Algorithm {
 
     BRUTE_FORCE(new BruteForceTemporalHarmonizerAlgorithm()),
-    OPTIMIZED(new OptimizedTemporalHarmonizerAlgorithm());
+    OPTIMIZED_QUICKSORT(new OptimizedTemporalHarmonizerAlgorithm(new NormalSortingStrategy())),
+    OPTIMIZED_LSD_RADIX_SORT(new OptimizedTemporalHarmonizerAlgorithm(new LsdRadixSortingStrategy()));
 
     private final TemporalHarmonizerAlgorithm alg;
 }

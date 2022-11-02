@@ -3,6 +3,7 @@ package com.github.cobrijani.tempharm;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,6 +15,11 @@ public class DateRange implements Comparable<DateRange> {
 
     private LocalDate from;
     private LocalDate to;
+
+    public List<DatePoint> createDatePoints() {
+        return List.of(new DatePoint(from, true, to),
+                new DatePoint(to, false, from));
+    }
 
     @Override
     public int compareTo(DateRange other) {

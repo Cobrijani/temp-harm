@@ -24,19 +24,29 @@ public class AlgorithmsBenchmark {
         org.openjdk.jmh.Main.main(args);
     }
 
-    @Fork(value = 1, warmups = 1)
-    @Benchmark
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @BenchmarkMode(Mode.All)
-    public void benchBruteforce(ExecutionPlan plan, Blackhole blackhole) {
-        blackhole.consume(plan.bruteForce.harmonize(plan.dateRanges));
-    }
+//    @Fork(value = 1, warmups = 1)
+    //    @Benchmark
+    //    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    //    @BenchmarkMode(Mode.All)
+    //    public void benchBruteforce(ExecutionPlan plan, Blackhole blackhole) {
+    //        blackhole.consume(plan.bruteForce.harmonize(plan.dateRanges));
+    //    }
+    //
+    //    @Fork(value = 1, warmups = 1)
+    //    @Benchmark
+    //    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    //    @BenchmarkMode(Mode.All)
+    //    public void benchOptimized(ExecutionPlan plan, Blackhole blackhole) {
+    //        blackhole.consume(plan.optimized.harmonize(plan.dateRanges));
+    //    }
 
-    @Fork(value = 1, warmups = 1)
-    @Benchmark
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @BenchmarkMode(Mode.All)
-    public void benchOptimized(ExecutionPlan plan, Blackhole blackhole) {
-        blackhole.consume(plan.optimized.harmonize(plan.dateRanges));
-    }
+    //    @Fork(value = 1, warmups = 1)
+    //    @Benchmark
+    //    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    //    @BenchmarkMode(Mode.All)
+    //    public void benchOptimizedLsd(ExecutionPlan plan, Blackhole blackhole) {
+    //        blackhole.consume(plan.lsdOptimized.harmonize(plan.dateRanges));
+    //    }
+
+
 }
